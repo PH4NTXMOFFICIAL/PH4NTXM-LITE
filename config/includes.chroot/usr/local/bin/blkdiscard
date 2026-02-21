@@ -1,0 +1,3 @@
+#!/bin/sh
+PATH=$PATH:/sbin:/usr/sbin
+/usr/sbin/blkdiscard "$@"

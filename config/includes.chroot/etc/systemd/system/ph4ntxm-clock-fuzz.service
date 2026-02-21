@@ -1,0 +1,16 @@
+[Unit]
+Description=PH4NTXM Clock Fuzz
+DefaultDependencies=no
+After=local-fs.target
+Requires=local-fs.target
+Before=time-sync.target
+Before=systemd-timesyncd.service
+Before=network-pre.target
+ConditionPathExists=/usr/local/sbin/ph4ntxm-clock-fuzz.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-clock-fuzz.sh
+
+[Install]
+WantedBy=sysinit.target

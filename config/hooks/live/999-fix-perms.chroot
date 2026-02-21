@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+if [ -f /etc/ph4ntxm-skulist ]; then
+    chown root:root /etc/ph4ntxm-skulist
+    chmod 644 /etc/ph4ntxm-skulist
+fi
+
+if [ -f /etc/ph4ntxm-seed ]; then
+    chown root:root /etc/ph4ntxm-seed
+    chmod 644 /etc/ph4ntxm-seed
+fi

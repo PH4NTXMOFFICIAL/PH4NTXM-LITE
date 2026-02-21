@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Tor Browser Launcher Settings
+Comment=Tor Browser Launcher Settings
+Exec=torbrowser-launcher --settings
+Terminal=false
+Type=Application
+Icon=ph4ntxm-torbrowser-settings
+Categories=Network;WebBrowser;

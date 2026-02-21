@@ -1,0 +1,3 @@
+#!/bin/sh
+
+usermod --shell /usr/bin/zsh ph4ntxm

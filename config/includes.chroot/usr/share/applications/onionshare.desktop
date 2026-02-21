@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=OnionShare
+Comment=Open OnionShare GUI in terminal
+Exec=xfce4-terminal --hold -e "zsh -c 'echo -e \"\033[1;36m[+] Welcome to PH4NTXM OS.\033[0m\n\033[1;36m[+] Opening OnionShare application.\033[0m\n\033[1;36m[+] Stay secure, stay safe, stay PH4NTXM.\033[0m\"; sudo onionshare; exec zsh'"
+Terminal=false
+Icon=ph4ntxm-onionshare
+Categories=AnonymityPH4NTXM;

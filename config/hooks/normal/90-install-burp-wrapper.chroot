@@ -1,0 +1,68 @@
+#!/bin/bash
+set -e
+
+install -d -m 0755 /opt/burpsuite
+install -d -m 0755 /usr/local/bin
+install -d -m 0755 /usr/share/applications
+
+cat > /usr/local/bin/burpsuite <<'EOF'
+#!/bin/bash
+
+BURP_VERSION="2025.8.1"
+BURP_NAME="burpsuite_community_v${BURP_VERSION}.jar"
+BURP_URL="https://portswigger.net/burp/releases/download?product=community&version=${BURP_VERSION}&type=jar"
+BURP_SHA256="1aa1640daf733c654dd49ee0e873268e9c748ece4dbb0bbf83b4a064dd11e828"
+
+CACHE_DIR="/opt/burpsuite"
+JAR_PATH="${CACHE_DIR}/${BURP_NAME}"
+
+if ! command -v java >/dev/null 2>&1; then
+  echo "Java not found. Please install openjdk (e.g. openjdk-17-jre or newer) and re-run."
+  exit 1
+fi
+
+if [ -f "$JAR_PATH" ]; then
+  printf "Using cached Burp: %s\n" "$JAR_PATH"
+  exec java -jar "$JAR_PATH" "$@"
+fi
+
+tmpf="$(mktemp -p /tmp burpXXXX.jar)"
+echo "Downloading Burp Suite Community ${BURP_VERSION}..."
+if ! wget -O "$tmpf" --tries=3 --timeout=30 "$BURP_URL"; then
+  echo "Download failed. If automatic download doesn't work, open your browser to https://portswigger.net/burp/communitydownload to download manually."
+  rm -f "$tmpf"
+  xdg-open "https://portswigger.net/burp/communitydownload" >/dev/null 2>&1 || true
+  exit 1
+fi
+
+echo "Verifying SHA256..."
+calc_sha256="$(sha256sum "$tmpf" | awk '{print $1}')"
+if [ "$calc_sha256" != "$BURP_SHA256" ]; then
+  echo "SHA256 mismatch! expected: $BURP_SHA256 got: $calc_sha256"
+  echo "Aborting. Please verify the downloaded file manually at https://portswigger.net/burp/releases"
+  rm -f "$tmpf"
+  exit 1
+fi
+
+mv "$tmpf" "${JAR_PATH}"
+chmod 0644 "${JAR_PATH}"
+echo "Burp downloaded and verified at ${JAR_PATH}"
+exec java -jar "${JAR_PATH}" "$@"
+EOF
+
+chmod 0755 /usr/local/bin/burpsuite
+
+cat > /usr/share/applications/burpsuite-ph4ntxm.desktop <<'EOF'
+[Desktop Entry]
+Name=Burp Suite Community
+Comment=Burp Suite - Web security testing toolkit (Community)
+Exec=xfce4-terminal --hold -e "zsh -c 'echo -e \"\033[1;36m[+] Welcome to PH4NTXM OS.\033[0m\n\033[1;36m[+] Opening Burp Suite Community application.\033[0m\n\033[1;36m[+] Stay secure, stay safe, stay PH4NTXM.\033[0m\"; sudo /usr/local/bin/burpsuite; exec zsh'"
+Terminal=true
+Type=Application
+Categories=PentestingPH4NTXM;
+Icon=ph4ntxm-burpsuite
+StartupWMClass=BurpSuite
+MimeType=application/x-java-archive;
+EOF
+
+exit 0

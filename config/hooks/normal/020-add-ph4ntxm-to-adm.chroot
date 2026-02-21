@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+id ph4ntxm >/dev/null 2>&1 || exit 0
+usermod -aG adm ph4ntxm

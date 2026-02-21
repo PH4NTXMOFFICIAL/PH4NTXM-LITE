@@ -1,0 +1,32 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>Applications</Name>
+    <!-- Start with the normal XFCE menu -->
+    <MergeFile type="parent">/etc/xdg/menus/xfce-applications.menu</MergeFile>
+
+    <!-- --- Custom sub-menus --- -->
+    <Menu>
+        <Name>Pentesting</Name>
+        <Directory>pentesting.directory</Directory>
+        <Include>
+            <Category>PentestingPH4NTXM</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Security</Name>
+        <Directory>security.directory</Directory>
+        <Include>
+            <Category>SecurityPH4NTXM</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Anonymity</Name>
+        <Directory>anonymity.directory</Directory>
+        <Include>
+            <Category>AnonymityPH4NTXM</Category>
+        </Include>
+    </Menu>
+</Menu>

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+id ph4ntxm >/dev/null 2>&1 || useradd -m -s /bin/bash -U ph4ntxm
+echo ph4ntxm:ph4ntxm | chpasswd
+usermod -c "PH4NTXM" ph4ntxm
+usermod -aG sudo ph4ntxm

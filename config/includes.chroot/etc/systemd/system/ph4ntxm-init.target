@@ -1,0 +1,6 @@
+[Unit]
+Description=PH4NTXM Initialization Chain
+Requires=ph4ntxm-mode.service
+After=ph4ntxm-mode.service
+Before=network-pre.target
+AllowIsolate=no

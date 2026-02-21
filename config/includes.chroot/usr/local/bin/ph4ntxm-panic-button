@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+import gi, os, subprocess, time
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+NETWORK_INTERFACES = ["wlp1s0", "eno0"]
+USER_TO_KILL = "ph4ntxm"
+
+def nuke_sequence():
+    for iface in NETWORK_INTERFACES:
+        subprocess.run(["sudo", "ip", "link", "set", iface, "down"], stderr=subprocess.DEVNULL)
+    subprocess.run(f"pkill -u {USER_TO_KILL} -v -f {os.getpid()}", shell=True)
+    subprocess.run(["sudo", "systemctl", "poweroff", "--force", "--force"])
+
+class PanicDialog(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Panic Button")
+        
+        icon_path = "/usr/share/icons/Lyra-blue-dark/apps/scalable/ph4ntxm-panic-button.svg"
+        if os.path.exists(icon_path):
+            self.set_icon_from_file(icon_path)
+            
+        self.set_border_width(20)
+        self.set_resizable(False)
+        self.set_default_size(400, 150)
+        self.set_position(Gtk.WindowPosition.CENTER)
+
+        prompt_text = (
+            "<span size='small'>Initiates nuke sequence and emergency shutdown.</span>\n\n"
+            "<b>Do you want to proceed?</b>"
+        )
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=15)
+        self.add(vbox)
+        label = Gtk.Label()
+        label.set_markup(prompt_text)
+        label.set_justify(Gtk.Justification.CENTER)
+        vbox.pack_start(label, True, True, 0)
+
+        hbox = Gtk.Box(spacing=10)
+        vbox.pack_start(hbox, True, True, 0)
+        btn_yes = Gtk.Button(label="YES")
+        btn_yes.connect("clicked", self.on_yes)
+        hbox.pack_start(btn_yes, True, True, 0)
+        btn_no = Gtk.Button(label="NO")
+        btn_no.connect("clicked", self.on_no)
+        hbox.pack_start(btn_no, True, True, 0)
+
+    def on_yes(self, widget):
+        self.hide()
+        pw = Gtk.Window(type=Gtk.WindowType.POPUP)
+        pw.set_default_size(400, 150)
+        pw.set_position(Gtk.WindowPosition.CENTER)
+        l = Gtk.Label()
+        l.set_markup("<span foreground='#e74c3c' weight='bold' size='x-large'>SYSTEM IN PANIC ➡ NUKING...!</span>")
+        pw.add(l)
+        pw.show_all()
+        start = time.time()
+        while time.time() - start < 1.5:
+            while Gtk.events_pending(): Gtk.main_iteration()
+            time.sleep(0.05)
+        nuke_sequence()
+
+    def on_no(self, widget): self.close()
+
+if __name__ == "__main__":
+    win = PanicDialog()
+    win.connect("destroy", Gtk.main_quit)
+    win.show_all()
+    Gtk.main()

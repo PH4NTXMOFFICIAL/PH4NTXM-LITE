@@ -1,0 +1,11 @@
+[Unit]
+Description=PH4NTXM Force Local DNS
+After=network.target unbound.service
+Requires=unbound.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-local-dns.sh
+
+[Install]
+WantedBy=multi-user.target

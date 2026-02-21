@@ -1,0 +1,10 @@
+PRETTY_NAME="PH4NTXM GNU/Linux"
+NAME="PH4NTXM GNU/Linux"
+VERSION_ID="1.0"
+VERSION="1.0"
+VERSION_CODENAME=lite
+ID=ph4ntxm
+ID_LIKE=debian
+HOME_URL="https://www.ph4ntxmofficial.github.io"
+SUPPORT_URL="https://www.ph4ntxmofficial.github.io"
+BUG_REPORT_URL="https://www.ph4ntxmofficial.github.io"

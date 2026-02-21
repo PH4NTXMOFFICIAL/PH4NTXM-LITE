@@ -1,0 +1,157 @@
+PH4NTXM LITE LICENSE — PH4NTXM © 2026
+
+1. DOCUMENTATION & GUIDES
+
+All PH4NTXM Lite documentation, manuals, release notes, and accompanying
+text files (the “Documentation”) are distributed as part of the
+PH4NTXM Lite open-source project.
+
+The Documentation may be used for internal or external purposes,
+including reference, training, screenshots, educational material,
+public distribution, and derivative documentation.
+
+You may:
+
+* reproduce the Documentation in whole or in part,
+* publish or redistribute it,
+* modify it and create derivative works,
+* use it for commercial or non-commercial purposes,
+
+provided that:
+
+* proper attribution to PH4NTXM is maintained,
+* modified versions are clearly marked as modified,
+* no representation is made that modified Documentation is an official PH4NTXM release unless explicitly authorized.
+
+2. BRANDING & ARTWORK
+
+All PH4NTXM logos, banners, icons, visual themes, wallpapers, login
+screens, and other branding or visual assets (“Branding Assets”) remain
+the intellectual property of PH4NTXM and are protected by copyright
+and trademark law.
+
+Branding Assets may be used for the purpose of identifying official
+PH4NTXM Lite builds.
+
+You may not:
+
+* use PH4NTXM trademarks in a misleading or deceptive manner,
+* represent modified systems as official PH4NTXM builds without authorization.
+
+Modification or redistribution of Branding Assets is permitted only if
+such assets are clearly separated from official marks and not used to
+imply endorsement.
+
+Nothing in this License grants trademark rights to the PH4NTXM name
+or logo.
+
+3. CUSTOM SCRIPTS, CONFIGURATIONS & COMPONENTS
+
+All PH4NTXM Lite custom scripts, system modifications, configuration
+files, automation logic, and other software components developed for
+PH4NTXM Lite (the “Components”) are released under this License.
+
+You are permitted to:
+
+* copy, extract, and reuse Components,
+* modify or create derivative works based on them,
+* redistribute them in original or modified form,
+* use them for commercial or non-commercial purposes.
+
+Redistributions must:
+
+* include this License text,
+* preserve attribution to PH4NTXM,
+* clearly identify modified versions as modified.
+
+Ownership of the original PH4NTXM Lite project remains with PH4NTXM.
+
+Reverse engineering, analysis, and security research are permitted.
+
+4. LICENSE SCOPE & PERMITTED USE
+
+Individuals:
+PH4NTXM Lite may be used on multiple machines or virtual environments
+without restriction.
+
+Organizations:
+PH4NTXM Lite may be used within the same legal entity or redistributed
+externally, including internal deployments, hosted environments,
+educational platforms, or infrastructure.
+
+Redistribution to third parties is permitted under the terms of this License.
+
+Commercial use is permitted provided that:
+
+* this License remains intact,
+* no trademark misuse occurs,
+* no claim of official endorsement is made without authorization.
+
+5. REDISTRIBUTION
+
+You may:
+
+* repackage or redistribute PH4NTXM Lite, in whole or in part,
+* sell or provide PH4NTXM Lite as part of a hosted service,
+  lab environment, or training platform,
+* distribute PH4NTXM Lite preinstalled on hardware, virtual machines,
+  or appliances,
+* bundle PH4NTXM Lite with other operating systems, toolkits, or
+  distributions,
+
+provided that:
+
+* attribution is maintained,
+* this License is included,
+* modified builds are clearly identified,
+* official PH4NTXM releases are not impersonated.
+
+6. UPSTREAM SOFTWARE
+
+PH4NTXM Lite GNU/Linux includes software packages provided by Debian
+and other upstream projects.
+
+PH4NTXM does not claim ownership of upstream software.
+
+Each upstream package is distributed under its original license
+(GPL, LGPL, MIT, BSD, or others), and users are responsible for
+complying with the terms of those licenses.
+
+Nothing in this License limits or overrides rights granted by
+applicable open-source licenses.
+
+7. THIRD-PARTY / EULA-BOUND SOFTWARE
+
+Certain included software components are governed by their respective
+upstream licenses or end-user license agreements, including but not
+limited to:
+
+* Brave Browser
+* Burp Suite
+* Metasploit (Docker)
+
+Use of such components is subject to acceptance of the applicable
+upstream terms.
+
+8. ACQUISITION, INTEGRITY & ENFORCEMENT
+
+Official PH4NTXM Lite builds may be distributed by PH4NTXM.
+
+Modified builds must not be represented as official releases.
+
+Violations involving trademark misuse or impersonation may result in
+legal action under applicable trademark law.
+
+9. GOVERNING LAW
+
+This License shall be governed by and construed in accordance with
+European Union law, without regard to conflict-of-law principles.
+
+10. DISCLAIMER
+
+PH4NTXM Lite is provided “as is”, without warranty of any kind, express or
+implied, including but not limited to merchantability, fitness for a
+particular purpose, and non-infringement.
+
+In no event shall the authors or contributors be liable for any claim,
+damages, or other liability arising from the use of PH4NTXM Lite.

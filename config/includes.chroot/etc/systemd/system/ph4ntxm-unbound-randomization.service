@@ -1,0 +1,13 @@
+[Unit]
+Description=PH4NTXM Encrypted DNS Rotation
+After=ph4ntxm-mode.service local-fs.target
+Before=unbound.service
+ConditionPathExists=/usr/local/sbin/ph4ntxm-unbound-randomization.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-unbound-randomization.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=unbound.service

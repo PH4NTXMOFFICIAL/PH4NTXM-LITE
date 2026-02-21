@@ -1,0 +1,13 @@
+[Unit]
+Description=PH4NTXM DHCP Session Identity Generator
+After=ph4ntxm-mode.service ph4ntxm-identity-randomization.service ph4ntxm-net-identity-randomization.service
+Requires=ph4ntxm-identity-randomization.service
+Requires=ph4ntxm-net-identity-randomization.service
+Before=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-dhcp-session-generator.sh
+
+[Install]
+WantedBy=network-pre.target

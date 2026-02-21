@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+IFACE="$1"
+ACTION="$2"
+
+case "$ACTION" in
+    dhcp4-change|up) ;;
+    *) exit 0 ;;
+esac
+
+SESSION_FILE=/run/ph4ntxm/session_dhcp
+[ -r "$SESSION_FILE" ] || exit 0
+
+source "$SESSION_FILE"
+
+command -v nmcli >/dev/null 2>&1 || exit 0
+
+CONN="$(nmcli -t -f GENERAL.CONNECTION device show "$IFACE" 2>/dev/null | cut -d: -f2)"
+[ -n "$CONN" ] || exit 0
+
+MAC="$(cat /sys/class/net/$IFACE/address 2>/dev/null || true)"
+[ -n "$MAC" ] || exit 0
+
+CID="01:${MAC}"
+
+CUR_CID="$(nmcli -g ipv4.dhcp-client-id connection show "$CONN" 2>/dev/null || true)"
+CUR_VENDOR="$(nmcli -g ipv4.dhcp-vendor-class-identifier connection show "$CONN" 2>/dev/null || true)"
+CUR_HOST="$(nmcli -g ipv4.dhcp-hostname connection show "$CONN" 2>/dev/null || true)"
+CUR_TIMEOUT="$(nmcli -g ipv4.dhcp-timeout connection show "$CONN" 2>/dev/null || true)"
+CUR_DUID="$(nmcli -g ipv6.dhcp-duid connection show "$CONN" 2>/dev/null || true)"
+
+if [[ "$CUR_CID" != "$CID" || \
+      "$CUR_VENDOR" != "$VENDOR" || \
+      "$CUR_HOST" != "$HOSTNAME" || \
+      "$CUR_TIMEOUT" != "$TIMEOUT" || \
+      "$CUR_DUID" != "$DUID" ]]; then
+
+    nmcli connection modify "$CONN" \
+        ipv4.dhcp-client-id "$CID" \
+        ipv4.dhcp-vendor-class-identifier "$VENDOR" \
+        ipv4.dhcp-send-hostname yes \
+        ipv4.dhcp-hostname "$HOSTNAME" \
+        ipv4.dhcp-timeout "$TIMEOUT" \
+        ipv6.dhcp-duid "$DUID" \
+        >/dev/null 2>&1 || true
+fi
+
+exit 0

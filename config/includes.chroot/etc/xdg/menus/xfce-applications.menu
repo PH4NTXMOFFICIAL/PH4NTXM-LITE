@@ -1,0 +1,153 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+    <Name>Xfce</Name>
+
+    <DefaultAppDirs/>
+    <DefaultDirectoryDirs/>
+
+    <Include>
+        <Category>X-Xfce-Toplevel</Category>
+    </Include>
+
+    <Layout>
+        <!-- 1–4: launchers -->
+        <Filename>xfce4-run.desktop</Filename>
+        <Separator/>
+        <Filename>xfce4-file-manager.desktop</Filename>
+        <Filename>xfce4-terminal.desktop</Filename>
+        <Filename>ph4ntxm-lockdown.desktop</Filename>
+        <Filename>ph4ntxm-panic-button.desktop</Filename>
+
+        <Separator/>
+        <!-- Settings block -->
+        <Menuname>Settings</Menuname>
+
+        <Separator/>
+        <!-- Custom categories -->
+        <Menuname>Security</Menuname>
+        <Menuname>Anonymity</Menuname>
+        <Menuname>Pentesting</Menuname>
+
+        <Separator/>
+        <!-- Standard sections -->
+        <Menuname>Network</Menuname>
+        
+        <Separator/>
+        <Menuname>System</Menuname>
+        <Menuname>Accessories</Menuname>
+
+        <Separator/>
+        <Filename>xfce4-session-logout.desktop</Filename>
+    </Layout>
+
+    <!-- Settings -->
+    <Menu>
+        <Name>Settings</Name>
+        <Directory>xfce-settings.directory</Directory>
+        <Include><Category>Settings</Category></Include>
+        <Layout>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Separator/>
+            <Merge type="all"/>
+        </Layout>
+        <Menu>
+            <Name>Screensavers</Name>
+            <Directory>xfce-screensavers.directory</Directory>
+            <Include><Category>Screensaver</Category></Include>
+        </Menu>
+    </Menu>
+
+    <!-- Custom menus -->
+    <Menu>
+        <Name>Security</Name>
+        <Directory>security.directory</Directory>
+        <Include><Category>SecurityPH4NTXM</Category></Include>
+    </Menu>
+
+    <Menu>
+        <Name>Anonymity</Name>
+        <Directory>anonymity.directory</Directory>
+        <Include><Category>AnonymityPH4NTXM</Category></Include>
+    </Menu>
+
+    <Menu>
+        <Name>Pentesting</Name>
+        <Directory>pentesting.directory</Directory>
+        <Include><Category>PentestingPH4NTXM</Category></Include>
+    </Menu>
+
+    <!-- Standard menus -->
+    <Menu>
+        <Name>Accessories</Name>
+        <Directory>xfce-accessories.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Accessibility</Category>
+                <Category>Core</Category>
+                <Category>Legacy</Category>
+                <Category>Utility</Category>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>xfce4-file-manager.desktop</Filename>
+                <Filename>xfce4-terminal-emulator.desktop</Filename>
+                <Filename>xfce4-about.desktop</Filename>
+                <Filename>xfce4-run.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Graphics</Name>
+        <Directory>xfce-graphics.directory</Directory>
+        <Include><Category>Graphics</Category></Include>
+    </Menu>
+
+    <Menu>
+        <Name>Network</Name>
+        <Directory>xfce-network.directory</Directory>
+        <Include><Category>Network</Category></Include>
+        <Exclude>
+            <Or>
+                <Filename>xfce4-web-browser.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <Menu>
+        <Name>Multimedia</Name>
+        <Directory>xfce-multimedia.directory</Directory>
+        <Include>
+            <Category>Audio</Category>
+            <Category>Video</Category>
+            <Category>AudioVideo</Category>
+        </Include>
+    </Menu>
+
+    <Menu>
+        <Name>Office</Name>
+        <Directory>xfce-office.directory</Directory>
+        <Include><Category>Office</Category></Include>
+    </Menu>
+
+    <Menu>
+        <Name>System</Name>
+        <Directory>xfce-system.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Emulator</Category>
+                <Category>System</Category>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>xfce4-session-logout.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+
+    <DefaultMergeDirs/>
+</Menu>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 54.903202 56.25589"
+   version="1.1"
+   id="svg2"
+   width="54.903202"
+   height="56.25589"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4">
+      <stop
+         style="stop-color:#ff3dfb;stop-opacity:0;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#ff3dfb;stop-opacity:1;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2">
+      <stop
+         style="stop-color:#00abff;stop-opacity:0;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#00abff;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="32.80431"
+       y1="68.278938"
+       x2="32.80431"
+       y2="12.0047"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient4"
+       id="linearGradient5"
+       x1="32.413517"
+       y1="73.750046"
+       x2="32.413517"
+       y2="16.433691"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter7"
+       x="-0.020903227"
+       y="-0.038117649"
+       width="1.0418065"
+       height="1.0762353">
+      <feGaussianBlur
+         stdDeviation="0.54"
+         id="feGaussianBlur7" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter8"
+       x="-0.023505949"
+       y="-0.031714165"
+       width="1.0470119"
+       height="1.0634283">
+      <feGaussianBlur
+         stdDeviation="0.36999485"
+         id="feGaussianBlur8" />
+    </filter>
+  </defs>
+  <title
+     id="title1">Artboard-17</title>
+  <g
+     id="g8"
+     transform="translate(-2.9783999,-3.3252105)">
+    <g
+       id="g4"
+       transform="matrix(0.85,0,0,0.85,3.23,4.0795022)"
+       style="display:inline;fill:#000000;fill-opacity:1">
+      <path
+         d="M 62,30 H 2 a 1,1 0 0 0 -1,1 v 32 a 1,1 0 0 0 1,1 h 60 a 1,1 0 0 0 1,-1 V 31 A 1,1 0 0 0 62,30 Z M 43,54 v -6 h 18 v 6 z m -20,0 v -6 h 18 v 6 z M 3,54 v -6 h 18 v 6 z M 31,40 v 6 H 13 v -6 z m 20,0 v 6 H 33 v -6 z m 10,0 v 6 H 53 V 40 Z M 11,46 H 3 v -6 h 8 z M 61,38 H 43 V 32 H 61 Z M 41,38 H 23 V 32 H 41 Z M 3,32 h 18 v 6 H 3 Z m 0,24 h 8 v 6 H 3 Z m 10,0 h 18 v 6 H 13 Z m 20,0 h 18 v 6 H 33 Z m 28,6 h -8 v -6 h 8 z"
+         style="opacity:0.6;fill:#00abff;fill-opacity:1;filter:url(#filter7)"
+         id="path3" />
+      <path
+         d="m 14.0806,27.99 a 1,1 0 0 0 1.13,-0.8506 17.4945,17.4945 0 0 1 6.6558,-11.7211 7.5738,7.5738 0 0 1 2.3919,7.3917 1,1 0 0 0 1.3843,1.1054 c 2.5176,-1.1064 6.7925,-4.6338 4.9546,-10.0659 a 9.5566,9.5566 0 0 1 0.417,-7.5713 8.5327,8.5327 0 0 1 3.61,-3.5835 c -0.7827,3.62 -0.3247,8.8511 5.3052,11.3872 6.1528,2.7661 9.6777,7.7827 8.98,12.78 a 0.9994,0.9994 0 0 0 0.852,1.1284 0.9559,0.9559 0 0 0 0.14,0.01 1,1 0 0 0 0.9887,-0.8618 c 0.8243,-5.8994 -3.1562,-11.74 -10.14,-14.88 C 33.9741,9.2056 36.9819,1.7017 37.1133,1.3838 a 1.0008,1.0008 0 0 0 -1.1963,-1.3457 10.7259,10.7259 0 0 0 -6.6729,5.31 11.5321,11.5321 0 0 0 -0.5415,9.1425 5.68,5.68 0 0 1 -2.2685,6.6158 9.348,9.348 0 0 0 -4.0235,-7.7837 1.0033,1.0033 0 0 0 -1.1044,0.0288 19.3949,19.3949 0 0 0 -8.0762,13.5085 1,1 0 0 0 0.8506,1.13 z"
+         style="opacity:0.6;fill:#ff3dfb;fill-opacity:1;filter:url(#filter8)"
+         id="path4" />
+    </g>
+    <g
+       id="g2"
+       transform="matrix(0.85,0,0,0.85,3.23,4.0795022)"
+       style="fill:#000000;fill-opacity:1">
+      <path
+         d="M 62,30 H 2 a 1,1 0 0 0 -1,1 v 32 a 1,1 0 0 0 1,1 h 60 a 1,1 0 0 0 1,-1 V 31 A 1,1 0 0 0 62,30 Z M 43,54 v -6 h 18 v 6 z m -20,0 v -6 h 18 v 6 z M 3,54 v -6 h 18 v 6 z M 31,40 v 6 H 13 v -6 z m 20,0 v 6 H 33 v -6 z m 10,0 v 6 H 53 V 40 Z M 11,46 H 3 v -6 h 8 z M 61,38 H 43 V 32 H 61 Z M 41,38 H 23 V 32 H 41 Z M 3,32 h 18 v 6 H 3 Z m 0,24 h 8 v 6 H 3 Z m 10,0 h 18 v 6 H 13 Z m 20,0 h 18 v 6 H 33 Z m 28,6 h -8 v -6 h 8 z"
+         style="fill:url(#linearGradient3);fill-opacity:1"
+         id="path1" />
+      <path
+         d="m 14.0806,27.99 a 1,1 0 0 0 1.13,-0.8506 17.4945,17.4945 0 0 1 6.6558,-11.7211 7.5738,7.5738 0 0 1 2.3919,7.3917 1,1 0 0 0 1.3843,1.1054 c 2.5176,-1.1064 6.7925,-4.6338 4.9546,-10.0659 a 9.5566,9.5566 0 0 1 0.417,-7.5713 8.5327,8.5327 0 0 1 3.61,-3.5835 c -0.7827,3.62 -0.3247,8.8511 5.3052,11.3872 6.1528,2.7661 9.6777,7.7827 8.98,12.78 a 0.9994,0.9994 0 0 0 0.852,1.1284 0.9559,0.9559 0 0 0 0.14,0.01 1,1 0 0 0 0.9887,-0.8618 c 0.8243,-5.8994 -3.1562,-11.74 -10.14,-14.88 C 33.9741,9.2056 36.9819,1.7017 37.1133,1.3838 a 1.0008,1.0008 0 0 0 -1.1963,-1.3457 10.7259,10.7259 0 0 0 -6.6729,5.31 11.5321,11.5321 0 0 0 -0.5415,9.1425 5.68,5.68 0 0 1 -2.2685,6.6158 9.348,9.348 0 0 0 -4.0235,-7.7837 1.0033,1.0033 0 0 0 -1.1044,0.0288 19.3949,19.3949 0 0 0 -8.0762,13.5085 1,1 0 0 0 0.8506,1.13 z"
+         style="fill:url(#linearGradient5);fill-opacity:1"
+         id="path2" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Artboard-17</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

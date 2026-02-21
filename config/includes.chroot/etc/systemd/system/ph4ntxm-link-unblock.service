@@ -1,0 +1,13 @@
+[Unit]
+Description=PH4NTXM Unblock Network Interfaces
+DefaultDependencies=no
+After=ph4ntxm-net-prep.service local-fs.target
+Before=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-link-unblock.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=ph4ntxm-init.target

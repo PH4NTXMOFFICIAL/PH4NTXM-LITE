@@ -1,0 +1,19 @@
+#!/bin/sh
+LIVEUSER="ph4ntxm"
+ZSH="/usr/bin/zsh"
+
+if [ -x "$ZSH" ]; then
+  if ! grep -Fxq "$ZSH" /etc/shells 2>/dev/null; then
+    echo "$ZSH" >> /etc/shells
+  fi
+
+  if command -v chsh >/dev/null 2>&1; then
+    chsh -s "$ZSH" "$LIVEUSER" || true
+  elif command -v usermod >/dev/null 2>&1; then
+    usermod -s "$ZSH" "$LIVEUSER" || true
+  else
+    sed -i "s!^\($LIVEUSER:[^:]*:[0-9]*:[0-9]*:[^:]*:[^:]*:\).*!\1$ZSH!" /etc/passwd || true
+  fi
+fi
+
+exit 0

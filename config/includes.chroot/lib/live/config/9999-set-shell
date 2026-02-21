@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+LIVEUSER="ph4ntxm"
+if getent passwd "$LIVEUSER" >/dev/null 2>&1; then
+  CURRENT=\$(getent passwd "$LIVEUSER" | cut -d: -f7)
+  if [ "\$CURRENT" != "/usr/bin/zsh" ]; then
+    # try chsh first (works if user exists), fallback to usermod
+    chsh -s /usr/bin/zsh "$LIVEUSER" 2>/dev/null || usermod -s /usr/bin/zsh "$LIVEUSER" 2>/dev/null || true
+  fi
+fi

@@ -1,0 +1,12 @@
+[Unit]
+Description=PH4NTXM Network Identity Randomization
+After=ph4ntxm-mode.service local-fs.target ph4ntxm-identity-randomization.service
+Requires=ph4ntxm-identity-randomization.service
+Before=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-net-identity-randomization.sh
+
+[Install]
+WantedBy=network-pre.target

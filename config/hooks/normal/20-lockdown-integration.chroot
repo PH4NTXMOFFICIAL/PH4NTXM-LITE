@@ -1,0 +1,6 @@
+#!/bin/sh
+chmod +x /usr/local/bin/ph4ntxm-lockdown
+chmod +x /usr/local/bin/ph4ntxm-lockdown-tray
+
+update-desktop-database
+gtk-update-icon-cache /usr/share/icons/Lyra-blue-dark

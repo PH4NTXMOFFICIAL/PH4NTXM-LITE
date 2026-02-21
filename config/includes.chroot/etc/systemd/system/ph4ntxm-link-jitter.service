@@ -1,0 +1,12 @@
+[Unit]
+Description=PH4NTXM Link-Up Jitter
+DefaultDependencies=no
+Before=network-pre.target NetworkManager.service
+After=ph4ntxm-mode.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ph4ntxm-link-jitter.sh
+
+[Install]
+WantedBy=network-pre.target

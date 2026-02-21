@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -x /usr/local/sbin/ph4ntxm-identity-randomization.sh ]; then
+    /usr/local/sbin/ph4ntxm-identity-randomization.sh
+fi
